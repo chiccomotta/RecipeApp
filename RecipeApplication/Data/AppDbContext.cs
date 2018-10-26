@@ -15,7 +15,7 @@ namespace RecipeApplication.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Query Filter, vedi: https://docs.microsoft.com/it-it/ef/core/querying/filters 
+            // Query Filter, vedi documentazione: https://docs.microsoft.com/it-it/ef/core/querying/filters 
             modelBuilder.Entity<Recipe>().HasQueryFilter(r => r.IsDeleted == false);
         }
     }
